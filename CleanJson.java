@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.io.*;  
 public class CleanJson {
 	public static void main(String[] args) throws Exception{
-		String content = new Scanner(new File("Tweets.txt")).useDelimiter("\\Z").next();
+		String content = new Scanner(new File(args[0])).useDelimiter("\\Z").next();
 		System.out.println("Cleaning...");
 		content = newTextFile(content);
 		try(PrintWriter out = new PrintWriter("newTweets.txt")){
